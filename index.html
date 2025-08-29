@@ -78,6 +78,9 @@
     .faq-answer { padding:18px 20px; display:none; line-height:1.6; }
     .faq-answer.active { display:block; }
 
+    /* Ensure bank logos images scale properly */
+    .bank-logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
     /* Final CTA עם תמונת רקע שנייה */
     .final-cta {
       background: linear-gradient(135deg, rgba(102,126,234,.90) 0%, rgba(118,75,162,.90) 100%), url('final-cta-couple.png') center/cover no-repeat;
@@ -264,12 +267,13 @@
     <div class="container">
       <h4>אנחנו עובדים עם כל הבנקים הגדולים</h4>
       <div class="banks-grid">
-        <div class="bank-logo">הפועלים</div>
-        <div class="bank-logo">לאומי</div>
-        <div class="bank-logo">מזרחי</div>
-        <div class="bank-logo">דיסקונט</div>
-        <div class="bank-logo">אגוד</div>
-        <div class="bank-logo">פיבי</div>
+        <!-- Bank logos as images -->
+        <div class="bank-logo"><img src="b1313d77-2f8e-41da-b2da-6ef73016613b.png" alt="בנק הפועלים"></div>
+        <div class="bank-logo"><img src="2f2657f3-b7bc-43ae-b331-342a69b260e0.png" alt="בנק לאומי"></div>
+        <div class="bank-logo"><img src="3bd1f347-0027-46e8-a4c6-5a910fc4a7d6.png" alt="מזרחי טפחות"></div>
+        <div class="bank-logo"><img src="906a2074-1ee8-4dae-8fdd-9715382244ce.png" alt="בנק דיסקונט"></div>
+        <div class="bank-logo"><img src="80b709d9-6194-439f-a688-44bb895fc26b.png" alt="בנק פועלי אגודת ישראל"></div>
+        <div class="bank-logo"><img src="e4cb0bcc-5721-47fb-8345-97d75b6051de.png" alt="בנק אגוד"></div>
       </div>
     </div>
   </section>
