@@ -81,14 +81,40 @@
     /* Ensure bank logos images scale properly */
     .bank-logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
 
+    /* Top trust bar */
+    .top-bar {
+      background:#f7f8fb;
+      color:#475569;
+      border-bottom:1px solid #edf2f7;
+      font-size:.95rem;
+      padding:6px 0;
+    }
+    .top-bar .row {
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+    .top-pill {
+      background:#fff;
+      border:1px solid #e2e8f0;
+      border-radius:999px;
+      padding:6px 12px;
+    }
+
     /* Site header styling */
     .site-header {
       background:#fff;
       padding:15px 0;
       box-shadow:0 2px 4px rgba(0,0,0,.05);
+      position:relative;
+      z-index:10;
     }
     .site-header .logo {
-      height:60px;
+      /* Increase header logo size for better visibility */
+      height:clamp(64px, 9vw, 96px);
+      width:auto;
       object-fit:contain;
     }
 
@@ -99,8 +125,49 @@
       text-align:center;
     }
     .site-footer .logo-footer {
-      height:60px;
+      /* Increase footer logo size */
+      height:clamp(72px, 8vw, 100px);
+      width:auto;
       object-fit:contain;
+    }
+    .footer-links {
+      margin-top:10px;
+      font-size:.95rem;
+      color:#4a5568;
+    }
+    .footer-links a {
+      color:#4a5568;
+      text-decoration:underline;
+      margin:0 5px;
+    }
+    .footer-links a:hover {
+      text-decoration:none;
+    }
+
+    /* Policy sections (Privacy / Terms) */
+    .policy {
+      padding:60px 0;
+      background:#fff;
+    }
+    .policy h3 {
+      font-size:2rem;
+      text-align:center;
+      margin-bottom:16px;
+      color:#2d3748;
+    }
+    .policy .content {
+      max-width:900px;
+      margin:0 auto;
+      line-height:1.85;
+      color:#475569;
+    }
+    .policy .content h4 {
+      margin-top:18px;
+      color:#1f2937;
+    }
+    .policy .content ul {
+      margin:0 0 10px 0;
+      padding-right:18px;
     }
 
     /* Final CTA עם תמונת רקע שנייה */
@@ -121,6 +188,16 @@
   </style>
 </head>
   <body>
+    <!-- Top trust bar -->
+    <div class="top-bar">
+      <div class="container">
+        <div class="row">
+          <div class="top-pill">✅ בדיקה חינם וללא התחייבות</div>
+          <div class="top-pill">🔒 פרטיות נשמרת</div>
+        </div>
+      </div>
+    </div>
+
     <!-- Site Header -->
     <header class="site-header">
       <div class="container">
@@ -334,10 +411,77 @@
     </div>
   </section>
 
+  <!-- Privacy Policy Section -->
+  <section id="privacy" class="policy">
+    <div class="container">
+      <h3>מדיניות פרטיות</h3>
+      <div class="content">
+        <p>אנחנו מכבדים את פרטיותכם. להלן עקרונות המדיניות שלנו (תקציר):</p>
+
+        <h4>אילו נתונים נאספים?</h4>
+        <ul>
+          <li>פרטים שמזינים בטופס: שם, טלפון, דוא"ל ונתוני משכנתא בסיסיים.</li>
+          <li>נתוני שימוש טכניים הכרחיים להפעלת האתר (ללא אנליטיקות מתקדמות בשלב זה).</li>
+        </ul>
+
+        <h4>למה אנחנו משתמשים בנתונים?</h4>
+        <ul>
+          <li>למטרת יצירת קשר ובדיקת זכאות להפחתת עלויות משכנתא.</li>
+          <li>שיפור חוויית המשתמש והאתר.</li>
+        </ul>
+
+        <h4>שיתוף מידע</h4>
+        <p>אין מכירת נתונים לצד שלישי. במידת הצורך נשתף מידע רק עם גורמי טיפול מקצועיים לצורך הבדיקה (לדוגמה: יועצי משכנתאות/גופים פיננסיים) ורק במידה הנדרשת לביצוע השירות.</p>
+
+        <h4>אחסון ואבטחה</h4>
+        <p>אנו נוקטים אמצעי אבטחה סבירים על מנת להגן על המידע. ניתן לבקש מחיקה/עדכון של נתונים שנמסרו באמצעות פנייה אלינו.</p>
+
+        <h4>זכויותיכם</h4>
+        <ul>
+          <li>זכות לעיין, לעדכן ולבקש מחיקה של המידע.</li>
+          <li>זכות להסיר הסכמה לקבלת פניות שיווקיות אם יהיו בעתיד.</li>
+        </ul>
+
+        <p>עדכוני מדיניות יתפרסמו בעמוד זה. השימוש באתר מהווה הסכמה למדיניות העדכנית.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Terms of Use Section -->
+  <section id="terms" class="policy">
+    <div class="container">
+      <h3>תנאי שימוש</h3>
+      <div class="content">
+        <h4>מהות השירות</h4>
+        <p>המידע באתר הוא כללי ואיננו מהווה ייעוץ פיננסי/משפטי אישי. החלטות פיננסיות יתקבלו לאחר בדיקה אישית ומלאה של נתוניכם.</p>
+
+        <h4>הגבלות אחריות</h4>
+        <ul>
+          <li>אין התחייבות לתוצאות/חיסכון מסוים; כל מקרה נבחן לגופו.</li>
+          <li>אין אחריות לתכנים/שירותים של צדדים שלישיים אליהם תופנו, אם וככל שיהיו.</li>
+        </ul>
+
+        <h4>קניין רוחני</h4>
+        <p>כל התכנים באתר מוגנים בזכויות יוצרים. אין להעתיק/להפיץ ללא אישור מראש.</p>
+
+        <h4>שינויים באתר</h4>
+        <p>אנו רשאים לשנות את תוכן האתר והמדיניות מעת לעת. המשך שימוש באתר מהווה הסכמה לתנאים המעודכנים.</p>
+
+        <h4>דין ושיפוט</h4>
+        <p>הדין החל הוא דין מדינת ישראל.</p>
+
+        <p>ליצירת קשר – ניתן להשתמש בטופס באתר. כשיהיו פרטי קשר מלאים (טלפון/עוסק/כתובת) נעדכן אותם כאן ובפוטר.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Site Footer -->
   <footer class="site-footer">
     <div class="container">
       <img src="logo.png" alt="משכנתא בתבונה" class="logo-footer">
+      <div class="footer-links">
+        <a href="#privacy">מדיניות פרטיות</a> | <a href="#terms">תנאי שימוש</a>
+      </div>
     </div>
   </footer>
 
