@@ -81,6 +81,28 @@
     /* Ensure bank logos images scale properly */
     .bank-logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
 
+    /* Site header styling */
+    .site-header {
+      background:#fff;
+      padding:15px 0;
+      box-shadow:0 2px 4px rgba(0,0,0,.05);
+    }
+    .site-header .logo {
+      height:60px;
+      object-fit:contain;
+    }
+
+    /* Site footer styling */
+    .site-footer {
+      background:#f8f9fa;
+      padding:40px 0;
+      text-align:center;
+    }
+    .site-footer .logo-footer {
+      height:60px;
+      object-fit:contain;
+    }
+
     /* Final CTA עם תמונת רקע שנייה */
     .final-cta {
       background: linear-gradient(135deg, rgba(102,126,234,.90) 0%, rgba(118,75,162,.90) 100%), url('final-cta-couple.png') center/cover no-repeat;
@@ -98,7 +120,13 @@
     }
   </style>
 </head>
-<body>
+  <body>
+    <!-- Site Header -->
+    <header class="site-header">
+      <div class="container">
+        <img src="logo.png" alt="משכנתא בתבונה" class="logo">
+      </div>
+    </header>
   <!-- Hero Section -->
   <section class="hero" aria-label="כותרת ותועלת מרכזית">
     <div class="container">
@@ -305,6 +333,13 @@
       <a href="#form" class="cta-button">התחל לחסוך עכשיו!</a>
     </div>
   </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <img src="logo.png" alt="משכנתא בתבונה" class="logo-footer">
+    </div>
+  </footer>
 
   <script>
     function toggleFaq(element) {
